@@ -10,7 +10,7 @@ namespace TedWeb.Models
         [Required]
         public string Name { get; set; }
 
-        public string DisplayOrder{ get; set; }
+        public int DisplayOrder{ get; set; }
 
     }
 }
