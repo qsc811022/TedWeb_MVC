@@ -7,7 +7,7 @@
             <h2 class="text-primary">Create Category</h2>
             <hr/>
         </div>
-        <div asp-validation-summary="All"></div>
+        <div asp-validation-summary="ModelOnly"></div>
         <div class="mb-3 row p-1">
             <label asp-for="Name" class="p-0"></label>
             <input asp-for="Name" type="text" class="form-control"/>
@@ -23,7 +23,7 @@
                 <button type="submit" class="btn btn-primary form-control" >Create</button>
             </div>
             <div class="col-6 col-md-3">
-                <a asp-controller="Creategory" asp-action="Index" class="btn btn-outline-secondary form-control border">
+                <a asp-controller="Category" asp-action="Index" class="btn btn-outline-secondary form-control border">
                     Back to List
                 </a>
             </div>
@@ -31,3 +31,9 @@
 
     </div>
 </form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
