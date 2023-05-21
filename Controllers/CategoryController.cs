@@ -37,6 +37,7 @@ namespace TedWeb.Controllers
             {
                 _db.Categories.Add(obj);
                 _db.SaveChanges();
+                TempData["Success"]="Category Created successfully";
                 return RedirectToAction("Index");
             }
             return View(obj);
@@ -95,6 +96,7 @@ namespace TedWeb.Controllers
             }
             _db.Categories.Remove(obj);
             _db.SaveChanges();
+            TempData["Success"] = "Category Delete successfully";
             return RedirectToAction("Index");
         }
 
