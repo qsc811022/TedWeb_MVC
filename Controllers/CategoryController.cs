@@ -68,6 +68,7 @@ namespace TedWeb.Controllers
             {
                 _db.Categories.Update(obj);
                 _db.SaveChanges();
+                TempData["Success"] = "Category Updated successfully";
                 return RedirectToAction("Index");
             }
             return View(obj);
