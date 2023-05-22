@@ -5,7 +5,7 @@ VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TedWeb", "TedWeb.csproj", "{3CBBC55B-4671-42DF-A4F6-AA61736326F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp_Temp", "..\WebApp_Temp\WebApp_Temp.csproj", "{1E8B2C9B-F18B-456F-9860-11EEAC7A3679}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp_Temp", "..\WebApp_Temp\WebApp_Temp.csproj", "{1E8B2C9B-F18B-456F-9860-11EEAC7A3679}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
