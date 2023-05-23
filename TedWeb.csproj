@@ -20,4 +20,9 @@
     <Folder Include="Migrations\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TedWeb.Model\TedWeb.Model.csproj" />
+    <ProjectReference Include="..\TedWeb.Utility\TedWeb.Utility.csproj" />
+  </ItemGroup>
+
 </Project>

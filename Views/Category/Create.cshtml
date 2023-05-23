@@ -19,12 +19,12 @@
                 </div>
                 <div asp-validation-summary="ModelOnly"></div>
                 <div class="form-floating py-2 col-12">
-                    <label asp-for="Name" class="form-control shadow"></label>
+                    <label asp-for="Name" class="form-control border-0 shadow"></label>
                     <input asp-for="Name" class="ms-2" />
                     <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
                 <div class="mb-3 row p-1">
-                    <label asp-for="DisplayOrder" class="p-0"></label>
+                    <label asp-for="DisplayOrder" class="form-control border-0 shadow"></label>
                     <input asp-for="DisplayOrder" class="form-control" />
                     <span asp-validation-for="DisplayOrder" class="text-danger"></span>
                 </div>
@@ -33,7 +33,7 @@
                         <button type="submit" class="btn btn-primary form-control">Create</button>
                     </div>
                     <div class="col-6 col-md-3">
-                        <a asp-controller="Category" asp-action="Index" class="btn btn-outline-secondary form-control border">
+                        <a asp-controller="Category" asp-action="Index" class="btn btn-outline-primary border">
                             Back to List
                         </a>
                     </div>

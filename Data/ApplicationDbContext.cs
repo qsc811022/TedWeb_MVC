@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-using TedWeb.Models;
+using TedWeb.Model.Models;
 
 namespace TedWeb.Data
 {

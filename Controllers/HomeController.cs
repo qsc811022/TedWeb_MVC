@@ -2,7 +2,8 @@
 
 using System.Diagnostics;
 
-using TedWeb.Models;
+using TedWeb.Model;
+
 
 namespace TedWeb.Controllers
 {

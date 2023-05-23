@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
 using TedWeb.Data;
-using TedWeb.Models;
+using TedWeb.Model.Models;
 
 namespace TedWeb.Controllers
 {
