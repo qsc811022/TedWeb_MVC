@@ -5,8 +5,9 @@ using System.Diagnostics;
 using TedWeb.Model;
 
 
-namespace TedWeb.Controllers
+namespace TedWeb.Areas.Customer.Controllers
 {
+    [Area("Customer")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
