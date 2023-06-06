@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 using TedWeb.DataAccess.Repository;
 using TedWeb.Model;
@@ -19,11 +20,29 @@ namespace TedWeb.Areas.Admin.Controllers
         {
             //List<Product>objProductList=_db.Categories.ToList();
             List<Product> objProductList = _unitOfWork.Product.GetAll().ToList();
+            //IEnumerable<SelectListItem> CategoryList=_unitOfWork.Category.GetAll().
+            //    Select(u=>new SelectListItem
+            //    {
+            //        Text=u.Name,
+            //        Value=u.Id.ToString(),
+
+            //    })
+            //    ;
             return View(objProductList);
         }
 
         public IActionResult Create()
         {
+            IEnumerable<SelectListItem> CategoryList = _unitOfWork.Category.GetAll().
+                Select(u => new SelectListItem
+                {
+                    Text = u.Name,
+                    Value = u.Id.ToString(),
+
+                });
+            //ViewBag.CategoryList = CategoryList;
+            ViewData["CategoryList"]= CategoryList;
+
             return View();
         }
         [HttpPost]

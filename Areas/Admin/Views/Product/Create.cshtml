@@ -66,6 +66,15 @@
                     <span asp-validation-for="Price100" class="text-danger"></span>
                 </div>
 
+                <div class="mb-3 row p-1">
+                   @* <label asp-for="Price100" class="form-control border-0 shadow"></label>*@
+                    <select asp-for="CategoryId" asp-items="@(ViewData["CategoryList"] as IEnumerable<SelectListItem>)" class="form-select border-0 shadow">
+                        <option disabled selected>--Select Category---</option>
+                    </select>
+                    <input asp-for="CategoryId" class="form-control" />
+                    <span asp-validation-for="CategoryId" class="text-danger"></span>
+                </div>
+
                 <div class="row">
                     <div class="col-6 col-md-3">
                         <button type="submit" class="btn btn-primary form-control">Create</button>
