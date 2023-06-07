@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using TedWeb.DataAccess.Repository;
 using TedWeb.Model;
 using TedWeb.Model.Models;
+using TedWeb.Model.ViewModels;
 
 namespace TedWeb.Areas.Admin.Controllers
 {
@@ -33,20 +34,22 @@ namespace TedWeb.Areas.Admin.Controllers
 
         public IActionResult Create()
         {
-            IEnumerable<SelectListItem> CategoryList = _unitOfWork.Category.GetAll().
+            ProductVM productVM = new ProductVM()
+            {
+                CategoryList= _unitOfWork.Category.GetAll().
                 Select(u => new SelectListItem
                 {
                     Text = u.Name,
                     Value = u.Id.ToString(),
 
-                });
-            //ViewBag.CategoryList = CategoryList;
-            ViewData["CategoryList"]= CategoryList;
+                }),
+            Product =new Product()
+            };
 
-            return View();
+            return View(productVM);
         }
         [HttpPost]
-        public IActionResult Create(Product obj)
+        public IActionResult Create(ProductVM productVM)
         {
             //if (obj.Name == obj.DisplayOrder.ToString())
             //{
@@ -58,13 +61,26 @@ namespace TedWeb.Areas.Admin.Controllers
             //}
             if (ModelState.IsValid)
             {
-                _unitOfWork.Product.Add(obj);
+                _unitOfWork.Product.Add(productVM.Product);
                 _unitOfWork.Save();
                 //_db.SaveChanges();
                 TempData["Success"] = "Product Created successfully";
                 return RedirectToAction("Index");
             }
-            return View(obj);
+            else
+            {
+
+                productVM.CategoryList = _unitOfWork.Category.GetAll().
+                    Select(u => new SelectListItem
+                    {
+                        Text = u.Name,
+                        Value = u.Id.ToString(),
+
+                     });
+          
+                return View(productVM);
+            }
+        
 
         }
 
