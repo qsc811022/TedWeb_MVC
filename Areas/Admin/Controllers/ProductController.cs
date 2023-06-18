@@ -78,7 +78,7 @@ namespace TedWeb.Areas.Admin.Controllers
                 if (file!=null)
                 {
                     string fileName=Guid.NewGuid().ToString()+Path.GetExtension(file.FileName);
-                    string productPath=Path.Combine(wwwRootPath, @"images\product");
+                    string productPath=Path.Combine(wwwRootPath, @"images\product\");
 
                     if (!string.IsNullOrEmpty(productVM.Product.ImageUrl))
                     {
