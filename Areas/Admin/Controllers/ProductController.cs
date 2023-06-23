@@ -21,16 +21,7 @@ namespace TedWeb.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
-            //List<Product>objProductList=_db.Categories.ToList();
-            List<Product> objProductList = _unitOfWork.Product.GetAll().ToList();
-            //IEnumerable<SelectListItem> CategoryList=_unitOfWork.Category.GetAll().
-            //    Select(u=>new SelectListItem
-            //    {
-            //        Text=u.Name,
-            //        Value=u.Id.ToString(),
-            //dd
-            //    })
-            //    ;
+            List<Product> objProductList = _unitOfWork.Product.GetAll(includeProperties:"Category").ToList();
             return View(objProductList);
         }
 
@@ -189,5 +180,17 @@ namespace TedWeb.Areas.Admin.Controllers
             TempData["Success"] = "Product Delete successfully";
             return RedirectToAction("Index");
         }
+
+        #region API CALLS
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            List<Product> objProductList = _unitOfWork.Product.GetAll(includeProperties: "Category").ToList();
+            return Json(new { objProductList });
+
+        }
+
+
+        #endregion
     }
 }
