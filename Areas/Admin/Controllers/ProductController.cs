@@ -1,5 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+
+using System.Data;
+
+using Tedliu.Utility;
 
 using TedWeb.DataAccess.Repository;
 using TedWeb.Model;
@@ -9,6 +14,7 @@ using TedWeb.Model.ViewModels;
 namespace TedWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class ProductController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
