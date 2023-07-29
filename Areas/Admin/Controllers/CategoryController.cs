@@ -12,7 +12,7 @@ namespace TedWeb.Areas.Admin.Controllers
     public class CategoryController : Controller
     {
         //private readonly ApplicationDbContext _db;
-        //private readonly ICategoryRepository _categoryRepo;
+        //private readonly ICategoryRepository _categoryRepo;111
         private readonly IUnitOfWork _unitOfWork;
 
         public CategoryController(IUnitOfWork unitOfWork)
