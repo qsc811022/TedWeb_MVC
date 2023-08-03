@@ -22,8 +22,7 @@ using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 
 using Tedliu.Utility;
-
-using TedWeb.DataAccess.Repository;
+using TedWeb.DataAccess.Repository.IRepository;
 using TedWeb.Model;
 
 namespace TedWeb.Areas.Identity.Pages.Account

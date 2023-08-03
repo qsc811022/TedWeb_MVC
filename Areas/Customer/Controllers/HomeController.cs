@@ -2,8 +2,7 @@
 
 using System.Collections.Generic;
 using System.Diagnostics;
-
-using TedWeb.DataAccess.Repository;
+using TedWeb.DataAccess.Repository.IRepository;
 using TedWeb.Model;
 
 
@@ -34,8 +33,14 @@ namespace TedWeb.Areas.Customer.Controllers
         public IActionResult Details(int productId)
         {
             //IEnumerable<Product> productList = _unitOfWork.Product.GetAll(includeProperties: "Category");
-            Product product=_unitOfWork.Product.Get(u=>u.Id== productId, includeProperties: "Category");
-            return View(product);
+            ShoppingCart cart = new()
+            {
+                Product=_unitOfWork.Product.Get(u=>u.Id==productId,includeProperties:"Category"),
+                Count=1,
+                ProductId=productId
+            };
+            //Product product=_unitOfWork.Product.Get(u=>u.Id== productId, includeProperties: "Category");
+            return View(cart);
         }
 
 

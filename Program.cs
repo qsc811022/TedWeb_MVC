@@ -5,6 +5,7 @@ using TedWeb.DataAccess.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Tedliu.Utility;
+using TedWeb.DataAccess.Repository.IRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 

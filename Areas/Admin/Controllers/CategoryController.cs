@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
 using TedWeb.DataAccess.Data;
-using TedWeb.DataAccess.Repository;
+using TedWeb.DataAccess.Repository.IRepository;
 using TedWeb.Model.Models;
 
 

@@ -5,8 +5,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Data;
 
 using Tedliu.Utility;
-
-using TedWeb.DataAccess.Repository;
+using TedWeb.DataAccess.Repository.IRepository;
 using TedWeb.Model;
 using TedWeb.Model.Models;
 using TedWeb.Model.ViewModels;
