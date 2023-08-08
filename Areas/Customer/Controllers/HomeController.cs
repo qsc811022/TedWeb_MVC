@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Security.Claims;
+
 using TedWeb.DataAccess.Repository.IRepository;
 using TedWeb.Model;
 
@@ -43,6 +46,32 @@ namespace TedWeb.Areas.Customer.Controllers
             //Product product=_unitOfWork.Product.Get(u=>u.Id== productId, includeProperties: "Category");
             return View(cart);
         }
+
+        [HttpPost]
+        [Authorize]
+        public IActionResult Details(ShoppingCart shoppingCart)
+        {
+            var claimIdentity=(ClaimsIdentity)User.Identity;
+            var userId=claimIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
+            shoppingCart.ApplicationUserId=userId;
+            ShoppingCart cartFromDb=_unitOfWork.ShoppingCart.Get(u=>u.ApplicationUserId==userId
+            && u.ProductId==shoppingCart.ProductId
+            );
+            if (cartFromDb !=null)
+            {
+                cartFromDb.Count+=shoppingCart.Count;
+                _unitOfWork.ShoppingCart.Update(shoppingCart);
+            }
+            else
+            {
+                 _unitOfWork.ShoppingCart.Add(shoppingCart);
+            }
+
+            TempData["success"]="Cart updated successfully";
+            _unitOfWork.Save();
+            return RedirectToAction("Index");
+        }
+
 
 
         public IActionResult Privacy()
