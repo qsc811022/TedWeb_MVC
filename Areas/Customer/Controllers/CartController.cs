@@ -214,18 +214,38 @@ namespace TedWeb.Areas.Customer.Controllers
 				ShoppingCartVM.OrderHeader.OrderStatus = SD.StatusPending;
 
 			}
+				_unitOfWork.OrderHeader.Add(shoppingCartVM.OrderHeader);
+				_unitOfWork.Save();
+
+            foreach (var cart in shoppingCartVM.ShoppingCartList)
+            {
+				OrderDetail orderDetail = new OrderDetail()
+				{
+					ProductId=cart.ProductId,
+					OrderHeaderId=ShoppingCartVM.OrderHeader.Id,
+					Price=cart.Price,
+					Count=cart.Count,
+					
+				};
+                _unitOfWork.OrderDetail.Add(orderDetail);
+				_unitOfWork.Save();
+            }
 
 
-				//var service = new SessionService();
-				//Session session = service.Create(options);
-				//_unitOfWork.OrderHeader.UpdateStripePaymentID(ShoppingCartVM.OrderHeader.Id, session.Id, session.PaymentIntentId);
-				//_unitOfWork.Save();
-				//Response.Headers.Add("Location", session.Url);
-				//return new StatusCodeResult(303);
-				return View(shoppingCartVM);
+            //var service = new SessionService();
+            //Session session = service.Create(options);
+            //_unitOfWork.OrderHeader.UpdateStripePaymentID(ShoppingCartVM.OrderHeader.Id, session.Id, session.PaymentIntentId);
+            //_unitOfWork.Save();
+            //Response.Headers.Add("Location", session.Url);
+            //return new StatusCodeResult(303);
+            return View(shoppingCartVM);
 
 			}
+		public IActionResult OrderConfirmation(int id)
+		{
+			return View(id);
 		}
+	}
 
 }
 
