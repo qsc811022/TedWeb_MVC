@@ -238,7 +238,8 @@ namespace TedWeb.Areas.Customer.Controllers
             //_unitOfWork.Save();
             //Response.Headers.Add("Location", session.Url);
             //return new StatusCodeResult(303);
-            return View(shoppingCartVM);
+            //return View(shoppingCartVM);
+			return RedirectToAction(nameof(OrderConfirmation), new {id=ShoppingCartVM.OrderHeader.Id});
 
 			}
 		public IActionResult OrderConfirmation(int id)
