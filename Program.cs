@@ -17,7 +17,7 @@ builder.Services.AddRazorPages();
 
 builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 
-
+///test
 //builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
 
 //builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
