@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UzAy60nw/ZwzEdOlhceCvC/oP5vk5m27+DYiTlctuBY=",
+  "Hash": "qm6LSbXsBbLaY16/sh0Px3FaAwqryU9qFoaIQrTvJLc=",
   "Source": "TedWeb",
   "BasePath": "_content/TedWeb",
   "Mode": "Default",
@@ -1409,6 +1409,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\company.js"
+    },
+    {
+      "Identity": "D:\\code1\\TedWeb\\wwwroot\\js\\order.js",
+      "SourceId": "TedWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\code1\\TedWeb\\wwwroot\\",
+      "BasePath": "_content/TedWeb",
+      "RelativePath": "js/order.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\order.js"
     },
     {
       "Identity": "D:\\code1\\TedWeb\\wwwroot\\js\\product.js",

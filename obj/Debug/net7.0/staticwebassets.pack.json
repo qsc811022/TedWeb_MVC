@@ -85,6 +85,10 @@
       "PackagePath": "staticwebassets\\js\\company.js"
     },
     {
+      "Id": "D:\\code1\\TedWeb\\wwwroot\\js\\order.js",
+      "PackagePath": "staticwebassets\\js\\order.js"
+    },
+    {
       "Id": "D:\\code1\\TedWeb\\wwwroot\\js\\product.js",
       "PackagePath": "staticwebassets\\js\\product.js"
     },
