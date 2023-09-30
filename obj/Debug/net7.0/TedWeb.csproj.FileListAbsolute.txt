@@ -269,6 +269,4 @@ D:\code1\TedWeb\bin\Debug\net7.0\vi\Humanizer.resources.dll
 D:\code1\TedWeb\bin\Debug\net7.0\zh-CN\Humanizer.resources.dll
 D:\code1\TedWeb\bin\Debug\net7.0\zh-Hans\Humanizer.resources.dll
 D:\code1\TedWeb\bin\Debug\net7.0\zh-Hant\Humanizer.resources.dll
-D:\code1\TedWeb\bin\Debug\net7.0\Tedliu.Utility.dll
-D:\code1\TedWeb\bin\Debug\net7.0\Tedliu.Utility.pdb
 D:\code1\TedWeb\bin\Debug\net7.0\Stripe.net.dll

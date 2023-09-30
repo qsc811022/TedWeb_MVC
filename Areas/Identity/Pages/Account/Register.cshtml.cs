@@ -24,6 +24,7 @@ using Microsoft.Extensions.Logging;
 using Tedliu.Utility;
 using TedWeb.DataAccess.Repository.IRepository;
 using TedWeb.Model;
+using TedWeb.Utility;
 
 namespace TedWeb.Areas.Identity.Pages.Account
 {

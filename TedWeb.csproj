@@ -26,7 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Tedliu.Utility\Tedliu.Utility.csproj" />
     <ProjectReference Include="..\TedWeb.DataAccess\TedWeb.DataAccess.csproj" />
     <ProjectReference Include="..\TedWeb.Model\TedWeb.Model.csproj" />
     <ProjectReference Include="..\TedWeb.Utility\TedWeb.Utility.csproj" />

@@ -4660,19 +4660,6 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "Tedliu.Utility/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "Microsoft.AspNetCore.Identity.UI": "7.0.9"
-        },
-        "compile": {
-          "bin/placeholder/Tedliu.Utility.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Tedliu.Utility.dll": {}
-        }
-      },
       "TedWeb.DataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -4707,6 +4694,9 @@
       "TedWeb.Utility/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.UI": "7.0.9"
+        },
         "compile": {
           "bin/placeholder/TedWeb.Utility.dll": {}
         },
@@ -12953,11 +12943,6 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "Tedliu.Utility/1.0.0": {
-      "type": "project",
-      "path": "../Tedliu.Utility/Tedliu.Utility.csproj",
-      "msbuildProject": "../Tedliu.Utility/Tedliu.Utility.csproj"
-    },
     "TedWeb.DataAccess/1.0.0": {
       "type": "project",
       "path": "../TedWeb.DataAccess/TedWeb.DataAccess.csproj",
@@ -12985,8 +12970,7 @@
       "Stripe.net >= 41.9.0",
       "TedWeb.DataAccess >= 1.0.0",
       "TedWeb.Model >= 1.0.0",
-      "TedWeb.Utility >= 1.0.0",
-      "Tedliu.Utility >= 1.0.0"
+      "TedWeb.Utility >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -13021,9 +13005,6 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\code1\\Tedliu.Utility\\Tedliu.Utility.csproj": {
-              "projectPath": "D:\\code1\\Tedliu.Utility\\Tedliu.Utility.csproj"
-            },
             "D:\\code1\\TedWeb.DataAccess\\TedWeb.DataAccess.csproj": {
               "projectPath": "D:\\code1\\TedWeb.DataAccess\\TedWeb.DataAccess.csproj"
             },
@@ -13096,7 +13077,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
