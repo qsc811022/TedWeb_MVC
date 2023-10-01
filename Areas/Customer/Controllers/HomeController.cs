@@ -7,7 +7,7 @@ using System.Security.Claims;
 
 using TedWeb.DataAccess.Repository.IRepository;
 using TedWeb.Model;
-
+using TedWeb.Utility;
 
 namespace TedWeb.Areas.Customer.Controllers
 {
@@ -51,25 +51,34 @@ namespace TedWeb.Areas.Customer.Controllers
         [Authorize]
         public IActionResult Details(ShoppingCart shoppingCart)
         {
-            var claimIdentity=(ClaimsIdentity)User.Identity;
-            var userId=claimIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
-            shoppingCart.ApplicationUserId=userId;
-            ShoppingCart cartFromDb=_unitOfWork.ShoppingCart.Get(u=>u.ApplicationUserId==userId
-            && u.ProductId==shoppingCart.ProductId
-            );
-            if (cartFromDb !=null)
+            var claimsIdentity = (ClaimsIdentity)User.Identity;
+            var userId = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
+            shoppingCart.ApplicationUserId = userId;
+
+            ShoppingCart cartFromDb = _unitOfWork.ShoppingCart.Get(u => u.ApplicationUserId == userId &&
+            u.ProductId == shoppingCart.ProductId);
+
+            if (cartFromDb != null)
             {
-                cartFromDb.Count+=shoppingCart.Count;
-                _unitOfWork.ShoppingCart.Update(shoppingCart);
+                //shopping cart exists
+                cartFromDb.Count += shoppingCart.Count;
+                _unitOfWork.ShoppingCart.Update(cartFromDb);
+                _unitOfWork.Save();
             }
             else
             {
-                 _unitOfWork.ShoppingCart.Add(shoppingCart);
+                //add cart record
+                _unitOfWork.ShoppingCart.Add(shoppingCart);
+                _unitOfWork.Save();
+                HttpContext.Session.SetInt32(SD.SessionCart,
+                _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == userId).Count());
             }
+            TempData["success"] = "Cart updated successfully";
 
-            TempData["success"]="Cart updated successfully";
-            _unitOfWork.Save();
-            return RedirectToAction("Index");
+
+
+
+            return RedirectToAction(nameof(Index));
         }
 
 
