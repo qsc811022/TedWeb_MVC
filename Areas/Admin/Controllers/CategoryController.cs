@@ -1,14 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 using TedWeb.DataAccess.Data;
 using TedWeb.DataAccess.Repository.IRepository;
 using TedWeb.Model.Models;
-
+using TedWeb.Utility;
 
 namespace TedWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    
+    [Authorize(Roles =SD.Role_Admin)]
     public class CategoryController : Controller
     {
         //private readonly ApplicationDbContext _db;

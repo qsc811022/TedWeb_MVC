@@ -15,6 +15,7 @@ using TedWeb.Utility;
 namespace TedWeb.Areas.Admin.Controllers
 {
 	[Area("Admin")]
+    [Authorize]
 	public class OrderController : Controller
 	{
         private readonly IUnitOfWork _unitOfWork;
