@@ -77,7 +77,10 @@ namespace TedWeb.Areas.Customer.Controllers
             if (cartFromDb.Count <= 1)
             {
                 //remove that from cart
+
                 _unitOfWork.ShoppingCart.Remove(cartFromDb);
+                HttpContext.Session.SetInt32(SD.SessionCart, _unitOfWork.ShoppingCart
+                    .GetAll(u => u.ApplicationUserId == cartFromDb.ApplicationUserId).Count() - 1);
             }
             else
             {
@@ -89,7 +92,7 @@ namespace TedWeb.Areas.Customer.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-		public IActionResult Summary()
+        public IActionResult Summary()
 		{
 			var claimsIdentity = (ClaimsIdentity)User.Identity;
 			var userId = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
@@ -248,17 +251,20 @@ namespace TedWeb.Areas.Customer.Controllers
 
 
 
-		public IActionResult Remove(int cartId)
+        public IActionResult Remove(int cartId)
         {
             var cartFromDb = _unitOfWork.ShoppingCart.Get(u => u.Id == cartId);
 
             _unitOfWork.ShoppingCart.Remove(cartFromDb);
+
+            HttpContext.Session.SetInt32(SD.SessionCart, _unitOfWork.ShoppingCart
+              .GetAll(u => u.ApplicationUserId == cartFromDb.ApplicationUserId).Count() - 1);
             _unitOfWork.Save();
             return RedirectToAction(nameof(Index));
         }
 
 
-	}
+    }
 
 }
 
