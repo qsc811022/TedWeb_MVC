@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\images\\lawn_leaf.jpg"
     },
     {
+      "Id": "D:\\code1\\TedWeb\\wwwroot\\images\\product\\005ad1fc-7a02-4070-95e1-d4674344cca7.png",
+      "PackagePath": "staticwebassets\\images\\product\\005ad1fc-7a02-4070-95e1-d4674344cca7.png"
+    },
+    {
       "Id": "D:\\code1\\TedWeb\\wwwroot\\images\\product\\0d214726-01b6-4079-84c4-c29d28999c2c.jpg",
       "PackagePath": "staticwebassets\\images\\product\\0d214726-01b6-4079-84c4-c29d28999c2c.jpg"
     },
@@ -65,6 +69,10 @@
       "PackagePath": "staticwebassets\\images\\product\\book.png"
     },
     {
+      "Id": "D:\\code1\\TedWeb\\wwwroot\\images\\product\\db7fcabc-1487-4391-95fc-328185ef16ea.png",
+      "PackagePath": "staticwebassets\\images\\product\\db7fcabc-1487-4391-95fc-328185ef16ea.png"
+    },
+    {
       "Id": "D:\\code1\\TedWeb\\wwwroot\\images\\product\\e1596061-9fcc-4e39-b97a-f19f0beaff39.jpg",
       "PackagePath": "staticwebassets\\images\\product\\e1596061-9fcc-4e39-b97a-f19f0beaff39.jpg"
     },
@@ -81,6 +89,50 @@
       "PackagePath": "staticwebassets\\images\\product\\lawn_leaf.jpg"
     },
     {
+      "Id": "D:\\code1\\TedWeb\\wwwroot\\images\\products\\product-1\\c5ced3af-ec44-403d-8f35-33643689016a.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\product-1\\c5ced3af-ec44-403d-8f35-33643689016a.jpg"
+    },
+    {
+      "Id": "D:\\code1\\TedWeb\\wwwroot\\images\\products\\product-4\\07392d06-c82c-46cf-8e3b-371e01f8a401.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\product-4\\07392d06-c82c-46cf-8e3b-371e01f8a401.jpg"
+    },
+    {
+      "Id": "D:\\code1\\TedWeb\\wwwroot\\images\\products\\product-4\\13f4748d-16c8-46ba-9df5-06e5eea3b87e.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\product-4\\13f4748d-16c8-46ba-9df5-06e5eea3b87e.jpg"
+    },
+    {
+      "Id": "D:\\code1\\TedWeb\\wwwroot\\images\\products\\product-4\\2ac733e1-6536-4b5a-9e25-aa0bdf973dbc.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\product-4\\2ac733e1-6536-4b5a-9e25-aa0bdf973dbc.jpg"
+    },
+    {
+      "Id": "D:\\code1\\TedWeb\\wwwroot\\images\\products\\product-4\\2ec39d4c-6bf8-478f-b26d-3351bac6a21d.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\product-4\\2ec39d4c-6bf8-478f-b26d-3351bac6a21d.jpg"
+    },
+    {
+      "Id": "D:\\code1\\TedWeb\\wwwroot\\images\\products\\product-4\\61a9114d-adae-48a6-8020-33a72889d2c5.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\product-4\\61a9114d-adae-48a6-8020-33a72889d2c5.jpg"
+    },
+    {
+      "Id": "D:\\code1\\TedWeb\\wwwroot\\images\\products\\product-4\\690e86d6-a40d-4b48-a0aa-6cce2dde6d4d.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\product-4\\690e86d6-a40d-4b48-a0aa-6cce2dde6d4d.jpg"
+    },
+    {
+      "Id": "D:\\code1\\TedWeb\\wwwroot\\images\\products\\product-4\\948b24b0-56dd-4db1-82c4-061faca65bce.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\product-4\\948b24b0-56dd-4db1-82c4-061faca65bce.jpg"
+    },
+    {
+      "Id": "D:\\code1\\TedWeb\\wwwroot\\images\\products\\product-4\\c63c9d35-6bc6-4495-9214-f545454e90be.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\product-4\\c63c9d35-6bc6-4495-9214-f545454e90be.jpg"
+    },
+    {
+      "Id": "D:\\code1\\TedWeb\\wwwroot\\images\\products\\product-4\\d0d24ca4-f371-4aec-a136-7bcc43ebea0c.png",
+      "PackagePath": "staticwebassets\\images\\products\\product-4\\d0d24ca4-f371-4aec-a136-7bcc43ebea0c.png"
+    },
+    {
+      "Id": "D:\\code1\\TedWeb\\wwwroot\\images\\products\\product-7\\e76d090b-5a7f-4398-8dbd-4c5cb6cf01ae.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\product-7\\e76d090b-5a7f-4398-8dbd-4c5cb6cf01ae.jpg"
+    },
+    {
       "Id": "D:\\code1\\TedWeb\\wwwroot\\js\\company.js",
       "PackagePath": "staticwebassets\\js\\company.js"
     },
@@ -95,6 +147,10 @@
     {
       "Id": "D:\\code1\\TedWeb\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\code1\\TedWeb\\wwwroot\\js\\user.js",
+      "PackagePath": "staticwebassets\\js\\user.js"
     },
     {
       "Id": "D:\\code1\\TedWeb\\wwwroot\\lib\\bootstrap\\LICENSE",

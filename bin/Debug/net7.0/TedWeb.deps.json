@@ -2847,7 +2847,8 @@
           "Microsoft.EntityFrameworkCore": "7.0.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.9",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.8",
-          "TedWeb.Model": "1.0.0"
+          "TedWeb.Model": "1.0.0",
+          "TedWeb.Utility": "1.0.0"
         },
         "runtime": {
           "TedWeb.DataAccess.dll": {}

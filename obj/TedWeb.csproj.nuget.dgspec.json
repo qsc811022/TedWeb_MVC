@@ -34,6 +34,9 @@
             "projectReferences": {
               "D:\\code1\\TedWeb.Model\\TedWeb.Model.csproj": {
                 "projectPath": "D:\\code1\\TedWeb.Model\\TedWeb.Model.csproj"
+              },
+              "D:\\code1\\TedWeb.Utility\\TedWeb.Utility.csproj": {
+                "projectPath": "D:\\code1\\TedWeb.Utility\\TedWeb.Utility.csproj"
               }
             }
           }
